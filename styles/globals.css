@@ -1,16 +1,407 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+a {
+  text-decoration: none;
+  color: var(--primary);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.line-height-0 {
+  line-height: 0;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.scroll-margin{
+  margin-right: 17px;
+}
+
+.form-section {
+
+}
+
+.inputs, .textarea{
+  flex: .47;
+}
+
+.form-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html, body{
+  height: 100VH;
+  width: 100%;
+  font-family: monospace !important;
+  font-size: 1.2rem;
+  scroll-behavior: smooth;
+}
+
+main{
+  position: relative;
+}
+
+.nav-header {
+  background: rgba(255,255,255, .7);
+  backdrop-filter: saturate(180%) blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav-header > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.page-wrapper {
+  height: 94.3VH;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-family: monospace;
+}
+
+p {
+  line-height: 2rem;
+}
+
+:root{
+  --primary: #10636b;
+  --darkwhite: #e8e8e8;
+  --secondary: #666;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  background: white;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100VH;
+}
+
+.modal-open {
+  opacity: 1;
+  z-index: 3;
+}
+
+.modal-closed {
+  opacity: 0;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul{
+  list-style: none;
+}
+
+.modal-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+span img {
+  width: 100%;
+  height: 100%;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-svg{
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.section-inner {
+  max-width: 75%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin: 1rem;
+}
+
+.marg-right-2 {
+  margin-right: 2rem;
+}
+
+.marg-top-2 {
+  margin-top: 2rem;
+}
+
+.marg-left-2 {
+  margin-left: 2rem;
+}
+
+.marg-bot-2 {
+  margin-bottom: 2rem;
+}
+
+.marg-bot-1 {
+  margin-bottom: 1rem;
+}
+
+.marg-top-1{
+  margin-top: 1rem;
+}
+
+.hi {
+  cursor: default;
+  /*hello there, developer!*/
+}
+
+li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.textarea{
+  width: 100%;
+}
+
+textarea {
+  height: 300px;
+}
+
+button, input, textarea {
+  padding: 0.5rem 1rem;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  color: black;
+  border: 3px solid black;
+}
+
+button:hover {
+  color: var(--primary);
+  border: 3px solid var(--primary);
+}
+
+textarea, input {
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-top: none;
+  border-right: none;
+  color: var(--primary);
+  width: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.focused-input{
+  outline: none;
+  border-color: var(--primary);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.error-text{
+  color: red;
+  font-size: .8rem;
+}
+
+.success-text{
+  color: var(--primary);
+  font-size: .8rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.input-wrap {
+  width: 100%;
+}
+
+.portfolio-wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 94.3VH;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.portfolio-bg{
+  background: var(--darkwhite);
+}
+
+.portfolio-description{
+  display: flex;
+  max-width: 40%;
+  margin-left: 5%;
+  flex-flow: column;
+  justify-content: space-between;
+  color: var(--secondary);
+  font-size: .8rem;
+  height: 28VH;
+}
+
+.portfolio-description p {
+  line-height: 1.5rem;
+}
+
+.mockup{
+  width: 50%;
+}
+
+.portfolio-logo{
+  position: absolute;
+  top: -7%;
+  left: -10%;
+  width: 35VW;
+  max-width: 400px;
+}
+
+.header-logo{
+  display: flex;
+  max-width: 150px;
+}
+
+/*media sizes based on tailwindcss*/
+
+/*small*/
+@media (max-width: 640px) {
+  .hire-us, .hi, .portfolio-logo {
+    display: none;
+  }
+
+  #modal.page-wrapper{
+    height: 100VH;
+  }
+
+  .inputs{
+    margin-bottom: 1rem;
+  }
+  .header-logo{
+    position: relative;
+    left: 38px;
+  }
+
+  .modal-icon{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .section-inner{
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .nav-header > nav{
+    padding: 8px 1rem;
+  }
+
+  .portfolio-wrapper{
+    flex-flow: column;
+    justify-content: start;
+    height: unset;
+  }
+
+  .portfolio-description{
+    max-width: 100%;
+    order: 2;
+    height: unset;
+    margin: 0;
+  }
+
+  .mockup{
+    order: 1;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form-section{
+    width: 100%;
+  }
+
+  .form-wrapper{
+    flex-flow: column;
+  }
+
+  .page-wrapper{
+    min-height: unset;
+    height: unset;
+    padding: 3rem 0;
+  }
+
+  #contactus.page-wrapper{
+    padding-bottom: 0;
+  }
+
+  .form-wrapper > .column.marg-right-2{
+    margin-right: 0;
+  }
+
+  textarea {
+    min-height: 200px;
+    width: 100%;
+    min-width: unset;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}
+
+/*medium*/
+@media (max-width: 768px) {
+
+}
+
+/*large*/
+@media (max-width: 1024px) {
+
+}
+
+/*extra large*/
+@media (max-width: 1280px) {
+
+}
+
+/*xx large*/
+@media (min-width: 1536px) {
+
 }
