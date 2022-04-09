@@ -15,6 +15,14 @@ a:hover{
   margin-right: 17px;
 }
 
+.i-right{
+  margin-right: 8px;
+}
+
+.i-left{
+  margin-left: 8px;
+}
+
 .form-section {
 
 }
@@ -60,7 +68,7 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 8px 1rem;
 }
 
 .page-wrapper {
@@ -297,7 +305,42 @@ input:focus, textarea:focus {
 
 .header-logo{
   display: flex;
-  max-width: 150px;
+  max-width: 48px;
+}
+
+svg {
+  width: 100%;
+  fill: var(--primary);
+}
+
+button svg {
+  width: 25px;
+}
+
+@keyframes rotatingAni {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center center;
+
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center center;
+
+  }
+}
+
+.rotating-container{
+
+}
+
+.rotating {
+  animation: rotatingAni 3s linear infinite;
+}
+
+.icon-btn{
+  display: flex;
+  align-items: center;
 }
 
 /*media sizes based on tailwindcss*/
@@ -328,10 +371,6 @@ input:focus, textarea:focus {
   .section-inner{
     max-width: 100%;
     width: 100%;
-  }
-
-  .nav-header > nav{
-    padding: 8px 1rem;
   }
 
   .portfolio-wrapper{

@@ -20,7 +20,7 @@ const AboutUs: NextPage = () => {
             <p className={"marg-bot-1"}>
               For us, code is our Arche- our source of action and progression towards solving current and future challenges.
 
-              Based out of the greater Denver and Chicago areas, Arche is your dedicated software solutions team ready to begin
+              Based out of the greater Denver and Chicago areas, Arche is your dedicated software solutions team ready
               to merge your vision with code. Arche- Action and Progression.
             </p>
             <p>

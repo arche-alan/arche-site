@@ -1,7 +1,5 @@
 import React from "react";
-import Image from 'next/image'
-import logo2 from "../assets/arche1.png"
-import logo3 from "../assets/arche2.png"
+import ArcheLogo from "./ArcheLogo";
 
 const Header = ({isModalHeader = false, toggleModal}: {isModalHeader?: boolean, toggleModal: () => void}) => {
   
@@ -19,7 +17,7 @@ const Header = ({isModalHeader = false, toggleModal}: {isModalHeader?: boolean, 
         </div>
         <div className={"header-logo"}>
           <a className="line-height-0" href={"/"}>
-            <Image src={logo3} alt={"Arche"}/>
+            <ArcheLogo/>
           </a>
         </div>
         <div onClick={toggleModal} className={"menu-svg pointer"}>

@@ -12,7 +12,7 @@ const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const submitForm = () => {
-    // resetErrors()
+    resetErrors()
     setIsLoading(true)
     fetch("/api/email", {method: "POST", body: JSON.stringify({name, email, phone, description})})
       .then(response => Promise.all([response.ok, response.json()]))
