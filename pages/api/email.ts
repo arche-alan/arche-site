@@ -7,6 +7,9 @@ const emailRegx: RegExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_
 const phoneRegx: RegExp = /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/
 
 const AWS = require('aws-sdk');
+AWS.config.region = process.env.APP_AWS_REGION
+AWS.config.accessKeyId = process.env.APP_AWS_ACCESS_KEY_ID
+AWS.config.secretAccessKey = process.env.APP_AWS_SECRET_ACCESS_KEY
 
 export default function handler(
   req: NextApiRequest,
