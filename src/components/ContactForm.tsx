@@ -51,27 +51,29 @@ const ContactForm = () => {
   return (
     <section className={"form-section"}>
       <form name="contact" method="POST" data-netlify="true" onSubmit={submitForm}>
+        <input type="hidden" name="form-name" value="contact" />
+
         <section className={"form-wrapper"}>
           <div className={"inputs column"}>
 
             <div className="input-wrap marg-bot-1" >
-              <input required className={name ? "focused-input" : ""} placeholder={"Name"} value={name} onChange={e => setName(e.target.value)}/>
+              <input name={"name"} required className={name ? "focused-input" : ""} placeholder={"Name"} value={name} onChange={e => setName(e.target.value)}/>
               {response.error.name && <Text error>{response.error.name}</Text>}
             </div>
 
             <div className="input-wrap marg-bot-1">
-              <input type={"email"} required className={email ? "focused-input" : ""} placeholder={"Email"} value={email} onChange={e => setEmail(e.target.value)}/>
+              <input name={"email"} type={"email"} required className={email ? "focused-input" : ""} placeholder={"Email"} value={email} onChange={e => setEmail(e.target.value)}/>
               {response.error.email && <Text error>{response.error.email}</Text>}
             </div>
 
             <div className="input-wrap">
-              <input type={"tel"} required className={phone ? "focused-input" : ""} placeholder={"Phone"} value={phone} onChange={e => setPhone(e.target.value)}/>
+              <input name={"phone"} type={"tel"} required className={phone ? "focused-input" : ""} placeholder={"Phone"} value={phone} onChange={e => setPhone(e.target.value)}/>
               {response.error.phone && <Text error>{response.error.phone}</Text>}
             </div>
           </div>
 
           <div className={"textarea"}>
-            <textarea required className={description ? "focused-input" : ""} placeholder={"Tell us about your project"} value={description} onChange={e => setDescription(e.target.value)}/>
+            <textarea name={"description"} required className={description ? "focused-input" : ""} placeholder={"Tell us about your project"} value={description} onChange={e => setDescription(e.target.value)}/>
             {response.error.description && <Text error>{response.error.description}</Text>}
           </div>
         </section>
