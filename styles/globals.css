@@ -358,9 +358,10 @@ button svg {
   .inputs{
     margin-bottom: 1rem;
   }
+
   .header-logo{
     position: relative;
-    left: 38px;
+    left: 24px;
   }
 
   .modal-icon{
@@ -404,10 +405,6 @@ button svg {
     min-height: unset;
     height: unset;
     padding: 3rem 0;
-  }
-
-  #contactus.page-wrapper{
-    padding-bottom: 0;
   }
 
   .form-wrapper > .column.marg-right-2{

@@ -10,7 +10,6 @@ const ContactUs: NextPage = () => {
     <PageWrapper id={"contactus"}>
       <SectionInner>
         <h2 className={"align-center marg-bot-2"}>CONTACT US</h2>
-
         <ContactForm/>
       </SectionInner>
     </PageWrapper>
